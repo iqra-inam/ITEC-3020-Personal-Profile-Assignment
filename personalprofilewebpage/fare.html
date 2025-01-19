@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgb(221, 195, 236);" onload="checkLogin()">
+    <div class="topnav"><br><br>
+        <h1>Welcome to My Profile Page</h1><br>
+        <a href="main.html">Home</a>
+        <a href="blogs.html">Post Blogs</a>
+        <a href="about_me.html">About Me</a>
+        <a href="contact.html">Contact</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="fare.html">Fare Calculation</a>
+        <a href="login.html" id="login-link">Login</a>
+        <a href="register.html" id="register-link">Register</a>
+        <a href="#" id="logout-button" style="display: none;">Logout</a><br><br>
+    </div>
+    <div class="container">
+        <h2>Bus Fare</h2><br>
+        <div class="row gy-3">
+
+            <div class="col-md-3">
+                <label for="busto" class="form-label">To:</label>
+                <input type="text" class="form-control" id="busto" placeholder="" required="">
+            </div>
+
+            <div class="col-md-3">
+                <label for="busfrom" class="form-label">From:</label>
+                <input type="text" class="form-control" id="busfrom" placeholder="" required="">
+            </div>
+
+            <div class="col-md-3">
+                <label for="buskm" class="form-label">Distance (Km):</label>
+                <input type="text" class="form-control" id="buskm" placeholder="" required="">
+            </div>
+
+            <div class="col-md-3">
+                <input type="button" value="Fare Calculation" id="btn1" onclick="calculate()">
+            </div>
+        </div>
+        <br>
+        <p style="text-align: center;" id="result"></p>
+    </div>
+    <div class="container">
+        <h2>Train Fare</h2><br>
+        <div class="row gy-3">
+
+            <div class="col-md-2">
+                <label for="trainto" class="form-label">To:</label>
+                <input type="text" class="form-control" id="trainto" placeholder="" required="">
+            </div>
+
+            <div class="col-md-2">
+                <label for="trainfrom" class="form-label">From:</label>
+                <input type="text" class="form-control" id="trainfrom" placeholder="" required="">
+            </div>
+
+            <div class="col-md-2">
+                <label for="trainkm" class="form-label">Distance (Km):</label>
+                <input type="text" class="form-control" id="trainkm" placeholder="" required="">
+            </div>
+
+            <div class="col-md-2">
+                <label for="promo" class="form-label">Promo Code:</label>
+                <select type="text" class="form-control" id="promo" placeholder="" required="">
+                    <option value="10">PROMO10</option>
+                    <option value="10">SAVE10</option>
+                    <option value="15">PROMO15</option>
+                    <option value="15">SAVE15</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <input type="button" value="Fare Calculation" id="btn2" onclick="calculate1()">
+            </div>
+        </div>
+        <br>
+        <p style="text-align: center;" id="result1"></p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Iqra Inam. All rights reserved.</p>
+        <address>
+            Written by Iqra Inam.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
